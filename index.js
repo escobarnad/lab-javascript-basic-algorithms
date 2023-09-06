@@ -52,3 +52,67 @@ else if (result > 0){
 else {
   console.log("What?! You both have the same name?")
 }
+
+// Bonus 1
+
+function countWords (inputString) {
+    const words = inputString.split(' ');
+    
+    let count = 0;
+    
+    for (let i = 0; i < words.length; i++) {
+      if (words [i] !== ' '); {
+        count++;
+      }
+    }
+   return count; 
+    
+  }
+  
+  console.log(countWords(longText));
+  
+  
+  function countEt (inputString) {
+    const countWords = inputString.split(' ');
+    
+    let sum = 0;
+    
+    for (let i = 0; i < countWords.length; i++) {
+      if (countWords [i] === 'et') {
+        sum++;
+      }
+    }
+   return sum; 
+    
+  }
+  
+  console.log(countEt(longText));
+
+  //Bonus 2
+  let phraseToCheck = "we panic in a pew"
+  let phraseReversed = "";
+  let phraseNoSpaces = "";
+  
+  
+  for (let i = 0; i < phraseToCheck.length; i++){
+    if (phraseToCheck[i] === " "){
+      continue
+    }
+    
+    phraseNoSpaces += phraseToCheck[i];
+  }
+  
+    
+  for (let i = phraseNoSpaces.length - 1; i >= 0; i--) {
+    let char = phraseNoSpaces[i];
+    phraseReversed += char;
+  }
+   
+    
+  if (phraseNoSpaces === phraseReversed){
+    console.log ("It is a Palindrome")
+  }
+  else {
+    console.log ("It's not a Palindrome")
+  }
+
